@@ -99,8 +99,8 @@
         "AllNodes",
         "direct"
       ],
+      "default": "America",
       "interrupt_exist_connections": true,
-      "default": "America"
     },
     {
       "type": "selector",
