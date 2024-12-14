@@ -101,7 +101,8 @@
         "AllNodes",
         "direct"
       ],
-      "interrupt_exist_connections": true
+      "interrupt_exist_connections": true,
+      "default": "America",
     },
     {
       "type": "selector",
