@@ -100,7 +100,7 @@
         "direct"
       ],
       "default": "America",
-      "interrupt_exist_connections": true,
+      "interrupt_exist_connections": true
     },
     {
       "type": "selector",
