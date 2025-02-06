@@ -175,6 +175,9 @@
     "final": "Proxy",
     "rules": [
       {
+        "action": "sniff"
+      },
+      {
         "type": "logical",
         "mode": "or",
         "rules": [
