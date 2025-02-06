@@ -76,13 +76,11 @@
       "type": "tun",
       "tag": "tun-in",
       "mtu": 9000,
-      "gso": true,
       "address": ["172.18.0.1/30","fdfe:dcba:9876::1/126"],
       "auto_route": true,
       "auto_redirect": true,
       "strict_route": true,
       "stack": "system",
-      "sniff": true,
       "sniff_override_destination": false,
       "route_exclude_address_set": ["geoip-cn"],
       "endpoint_independent_nat": false
@@ -170,14 +168,6 @@
     {
       "type": "direct",
       "tag": "direct"
-    },
-    {
-      "type": "dns",
-      "tag": "dns-out"
-    },
-    {
-      "type": "block",
-      "tag": "block"
     }
   ],
   "route": {
@@ -195,7 +185,7 @@
             "port": 53
           }
         ],
-        "outbound": "dns-out"
+        "action": "hijack-dns"
       },
       {
         "type": "logical",
@@ -212,11 +202,11 @@
             "protocol": "stun"
           }
         ],
-        "outbound": "block"
+        "action": "reject"
       },
       {
         "rule_set": "geosite-category-ads-all",
-        "outbound": "block"
+        "action": "reject"
       },
       {
         "ip_is_private": true,
